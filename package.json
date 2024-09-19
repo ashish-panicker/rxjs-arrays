@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "from": "ts-node src/from.ts",
-    "of": "ts-node src/of.ts",
-    "pipe": "ts-node src/pipe.ts"
+    "from": "ts-node src/from-rx.ts",
+    "of": "ts-node src/of-rx.ts",
+    "pipe": "ts-node src/pipe-rx.ts"
   },
   "keywords": [
     "javascript",

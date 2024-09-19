@@ -1,11 +1,3 @@
-import { from, of } from 'rxjs'
-import { catchError, filter, map, reduce, take } from 'rxjs/operators'
-
-const numbers: number[] = [1, 2, 3, 4, 5]
-
-// Create an observable from an array
-let numberObservable = from(numbers)
-
 /**
  * The pipe method in RxJS is used to chain multiple operators together in a readable
  * and functional way.
@@ -27,6 +19,15 @@ let numberObservable = from(numbers)
  * take: Limits the number of emissions from an observabl
  *
  */
+
+import { from, of } from 'rxjs'
+import { catchError, filter, map, reduce, take } from 'rxjs/operators'
+
+const numbers: number[] = [1, 2, 3, 4, 5]
+
+// Create an observable from an array
+let numberObservable = from(numbers)
+
 // Use pipe to combine operators
 const processedObservable = numberObservable.pipe(
   // Double each number
@@ -67,6 +68,8 @@ numberObservable.subscribe({
 // You can also handle errors inside the pipe method using operators like catchError or retry.
 // This allows you to gracefully handle errors within the observable chain.
 
+console.log()
+console.log('Handling errors:')
 numberObservable = from(numbers).pipe(
   // Map the values, but throw an error if the number is 3
   map((num) => {
